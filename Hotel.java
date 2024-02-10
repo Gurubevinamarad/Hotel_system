@@ -1,10 +1,11 @@
-import java.util.Scanner;
+ import java.util.Scanner;
 
-public class Hotel
+public class Hotel extends branch
  {
     public static void main(String[] args)
      {
         Scanner scanner = new Scanner(System.in);
+        branch ne=new branch();
         System.out.print("Enter customer name: ");
         String customerName = scanner.nextLine();
 
@@ -13,11 +14,12 @@ public class Hotel
 
         System.out.print("Enter assigned room number: ");
         int assignedRoomNo = scanner.nextInt();
-        
+       
         System.out.println("\nCustomer Information:");
         System.out.println("Name: " + customerName);
         System.out.println("Date of Booking: " + dateOfBooking);
-        System.out.println("Assigned Room Number: " + assignedRoomNo);
+        //System.out.println("Assigned Room Number: " + assignedRoomNo);
+        floor(assignedRoomNo);
         scanner.close();
     }
 }
